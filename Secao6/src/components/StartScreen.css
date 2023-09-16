@@ -1,0 +1,38 @@
+.startScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.startScreen h1 {
+  font-size: 3em;
+  color: #dfdfe1;
+  transition: 0.6s;
+}
+.startScreen h1:hover {
+  transform: scale(1.05);
+  color: white;
+}
+.startScreen .selectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.startScreen .selectContainer p {
+  font-size: 1.2em;
+}
+.startScreen .selectContainer button {
+  color: white;
+  padding: 0.7rem;
+  border-radius: 16px;
+  border: none;
+  background-color: #0c18b9;
+  box-shadow: 2px 2px 16px black;
+  transition: 0.4s;
+}
+.startScreen .selectContainer button:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,13 @@
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  gap: 15px;
+}
+input {
+  padding: 0.4rem 0.6rem;
+  margin: 2px;
+  font-size: 12pt;
+}
