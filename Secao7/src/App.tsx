@@ -35,6 +35,8 @@ const App = () => {
 
     const addedProduct = await res.json();
     await setProducts((prevProducts) => [...prevProducts, addedProduct]);
+    setName("");
+    setPrice(0);
   };
 
   const handleName = (e: Event) => {
