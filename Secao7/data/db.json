@@ -29,6 +29,11 @@
       "name": "Monitor",
       "price": "210",
       "id": 6
+    },
+    {
+      "name": "Processador",
+      "price": "1000",
+      "id": 7
     }
   ]
 }

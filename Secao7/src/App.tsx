@@ -1,39 +1,31 @@
 import { useState, useEffect } from "react";
+import { useFetch } from "./hooks/useFetch";
+import { usePost } from "./hooks/usePost";
+
 const url = "http://localhost:3000/products";
+
 const App = () => {
   const [products, setProducts] = useState([]);
   const [name, setName] = useState<string>("");
   const [price, setPrice] = useState<number>();
 
   //get produtos
+
+  const [data] = useFetch(url);
+
   useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
-  }, []);
+    setProducts(data);
+  }, [data]);
 
   //post produtos
 
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
 
-    if (name == undefined || price == undefined) return;
-    const product = {
-      name,
-      price,
-    };
-
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(product),
-    });
+    const addedProduct = await usePost(url, name, price);
 
     //carregamento dinamico
 
-    const addedProduct = await res.json();
     await setProducts((prevProducts) => [...prevProducts, addedProduct]);
     setName("");
     setPrice(0);
