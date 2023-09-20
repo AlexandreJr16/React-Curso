@@ -30,6 +30,11 @@ const App = () => {
       },
       body: JSON.stringify(product),
     });
+
+    //carregamento dinamico
+
+    const addedProduct = await res.json();
+    await setProducts((prevProducts) => [...prevProducts, addedProduct]);
   };
 
   const handleName = (e: Event) => {

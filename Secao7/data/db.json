@@ -19,6 +19,16 @@
       "name": "Joia ",
       "price": "345",
       "id": 4
+    },
+    {
+      "name": "Teclado",
+      "price": "110",
+      "id": 5
+    },
+    {
+      "name": "Monitor",
+      "price": "210",
+      "id": 6
     }
   ]
 }
